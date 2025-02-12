@@ -1,0 +1,474 @@
+/* Base Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+#navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 2rem;
+}
+
+.nav-list a {
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #007BFF;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .nav-list.active {
+        max-height: 300px;
+    }
+    .nav-list li {
+        margin: 1rem 0;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alt-bg {
+    background: #f4f4f4;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* About Section */
+#about h2,
+#services h2,
+#portfolio h2,
+#contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature {
+    flex: 1 1 30%;
+    margin: 1rem;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+/* Services Section */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 45%;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.contact-info li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li i {
+    margin-right: 0.5rem;
+    color: #007BFF;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Form Message Styles */
+#form-message {
+    margin-top: 1rem;
+    color: green;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #007BFF;
+}
+
+/* New Hero Slider Styles */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw;
+    display: flex;
+    transition: transform 0.8s ease;
+    height: 100vh;
+    z-index: -1;
+}
+
+.slide {
+    flex: 0 0 100vw;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* For mobile devices, override the slider image so it fills the area without showing blanks */
+@media (max-width: 768px) {
+    .slide {
+        background-size: cover;
+    }
+}
+
+/* Enhance Hero Text Styling */
+.hero-content h1,
+.hero-content p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Portfolio Card Styles */
+.portfolio-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.portfolio-icon {
+    font-size: 4rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background: linear-gradient(145deg, #007BFF, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    background: linear-gradient(145deg, #0056b3, #003f7f);
+    transform: translateY(-3px);
+}
+
+/* Statistics Section */
+#statistics {
+    background: #f4f4f4;
+    padding: 4rem 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Charts Grid */
+.charts-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Ensure each chart container adapts for two charts */
+.chart-container {
+    flex: 1 1 300px;
+    max-width: 400px;
+    position: relative;
+    height: 300px;  /* Adjust height as needed */
+    margin: 1rem auto;
+}
+
+/* Ensure the hero text remains centered on desktop */
+.hero-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.35); /* subtle black background with 35% opacity */
+    padding: 1.5rem;              /* add some padding around the text */
+    border-radius: 8px;           /* optional: round the corners */
+}

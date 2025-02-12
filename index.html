@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiezzTech - Best Tech Services Ever</title>
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#hero">KiezzTech</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="fas fa-bars"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="hero-slider">
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Empowering Your Business with Innovative Solutions</h1>
+            <p>We provide creative and effective strategies to boost your business.</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At KiezzTech, we are dedicated to delivering cutting-edge solutions that drive business growth. With years of experience and a passion for innovation, we craft strategies that exceed expectations.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovative Ideas</h3>
+                    <p>Creativity and innovation combine to solve your toughest challenges.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Expert Services</h3>
+                    <p>Professional services tailored to elevate your business.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Results Driven</h3>
+                    <p>We are focused on delivering measurable results and sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section alt-bg">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, user-friendly websites tailored to your needs.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Creating innovative mobile experiences for modern businesses.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Enhancing online visibility and driving organic traffic.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>Executing effective campaigns to boost engagement and conversion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Statistics & Doughnut Chart Section -->
+    <section id="statistics" class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-count="150">0</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="120">0</span>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="stonksChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Project One</h3>
+                        <p>Innovative web solution.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Project Two</h3>
+                        <p>Creative digital strategy.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Project Three</h3>
+                        <p>Mobile app excellence.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Project Four</h3>
+                        <p>Strategic marketing boost.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section alt-bg">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have a question or need a quote? Reach out to us today.</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@KiezzTech.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business St, Suite 456</li>
+                    </ul>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <div id="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KiezzTech. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-chevron-circle-up"></i></button>
+</body>
+</html>
